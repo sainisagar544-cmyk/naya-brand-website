@@ -1,5 +1,615 @@
 <!DOCTYPE html>
-<html>
-<head><title>Coming Soon</title></head>
-<body><h1>Website coming soon...</h1></body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanha Ji Dresses - Designer Poshak for Laddu Gopal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Basic Reset */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --primary-color: #A30000; /* Deep Maroon/Red */
+            --accent-color: #CC9933; /* Gold */
+            --background-color: #FFF8E1; /* Cream */
+            --light-cream-color: #F8F0E3; /* Slightly lighter cream for sections */
+            --text-color: #333333; /* Dark Grey */
+            --light-text-color: #F8F0E3; /* Lighter cream for contrast on dark backgrounds */
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Lato', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+            overflow-x: hidden;
+        }
+
+        /* Typography */
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary-color);
+            margin-bottom: 0.8em;
+            font-weight: 700;
+        }
+
+        h1 {
+            font-size: 3em;
+            color: var(--light-text-color); /* For hero section */
+        }
+
+        h2 {
+            font-size: 2.5em;
+            text-align: center;
+            margin-top: 1.5em;
+            padding-bottom: 0.5em;
+            position: relative;
+            display: block;
+            width: fit-content;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        h2::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 0;
+            width: 60px;
+            height: 3px;
+            background-color: var(--accent-color);
+        }
+
+        h3 {
+            font-size: 1.7em;
+        }
+
+        p {
+            margin-bottom: 1em;
+        }
+
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: var(--accent-color);
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: var(--primary-color); /* Gold button, maroon text */
+            padding: 12px 25px;
+            border-radius: 5px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            border: 2px solid var(--accent-color);
+        }
+
+        .btn:hover {
+            background-color: var(--primary-color);
+            color: var(--light-text-color); /* Maroon button, cream text */
+            border-color: var(--primary-color);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Header & Navbar */
+        header {
+            background-color: var(--primary-color);
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .brand-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 2em;
+            color: var(--light-text-color);
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin-left: 30px;
+        }
+
+        .nav-links a {
+            color: var(--light-text-color);
+            font-weight: 400;
+            font-size: 1.1em;
+            padding: 5px 0;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--accent-color);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+        .nav-links a:hover {
+            color: var(--accent-color);
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://via.placeholder.com/1920x800/A30000/CC9933?text=Adorn+Your+Devotion') no-repeat center center/cover;
+            height: 80vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: var(--light-text-color);
+        }
+
+        .hero-content {
+            max-width: 800px;
+            padding: 20px;
+        }
+
+        .hero-content h1 {
+            font-size: 4.5em;
+            margin-bottom: 0.2em;
+            line-height: 1.1;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero-content p {
+            font-size: 1.5em;
+            margin-bottom: 30px;
+            font-weight: 300;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+
+        /* General Section Styling */
+        section {
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* About Section */
+        .about-section {
+            background-color: var(--background-color);
+            text-align: center;
+        }
+        .about-section h2 {
+            margin-bottom: 1em;
+        }
+        .about-section p {
+            font-size: 1.2em;
+            max-width: 800px;
+            margin: 0 auto 2em;
+        }
+
+        /* Collections Section */
+        .collections-section {
+            background-color: var(--light-cream-color); /* Slightly different cream */
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .product-card {
+            background-color: #FFFFFF;
+            border: 1px solid #E0E0E0;
+            border-radius: 8px;
+            overflow: hidden;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 250px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: var(--light-text-color);
+            font-size: 1.5em;
+            font-family: 'Playfair Display', serif;
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Specific product image backgrounds (SVG data URIs for traditional patterns) */
+        .product-card:nth-child(1) .product-image { 
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 100 100"><rect x="0" y="0" width="100" height="100" fill="%23A30000"/><path d="M50 25L60 40L75 45L65 60L70 75L50 65L30 75L35 60L25 45L40 40Z" fill="%23CC9933"/><circle cx="50" cy="50" r="10" fill="%23CC9933"/></svg>'); 
+        }
+        .product-card:nth-child(2) .product-image { 
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 100 100"><rect x="0" y="0" width="100" height="100" fill="%23CC9933"/><path d="M50 10L65 35L90 40L70 60L75 90L50 75L25 90L30 60L10 40L35 35Z" fill="%23A30000"/><circle cx="50" cy="50" r="10" fill="%23A30000"/></svg>'); 
+        }
+        .product-card:nth-child(3) .product-image { 
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 100 100"><rect x="0" y="0" width="100" height="100" fill="%23A30000"/><path d="M50 20 L80 50 L50 80 L20 50 Z" fill="%23CC9933"/><circle cx="50" cy="50" r="10" fill="%23A30000"/></svg>'); 
+        }
+        .product-card:nth-child(4) .product-image { 
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 100 100"><rect x="0" y="0" width="100" height="100" fill="%23CC9933"/><path d="M50 10L65 35L90 40L70 60L75 90L50 75L25 90L30 60L10 40L35 35Z" fill="%23A30000"/><circle cx="50" cy="50" r="10" fill="%23A30000"/></svg>'); 
+        }
+
+        .product-card h3 {
+            color: var(--primary-color);
+            font-size: 1.5em;
+            margin: 20px 0 10px;
+            flex-grow: 1; /* Allows it to take up available space */
+        }
+
+        .product-card .price {
+            font-size: 1.3em;
+            font-weight: 700;
+            color: var(--accent-color);
+            margin-bottom: 15px;
+        }
+
+        .add-to-cart-btn {
+            background-color: var(--primary-color);
+            color: var(--light-text-color);
+            border: none;
+            padding: 10px 20px;
+            border-radius: 0 0 8px 8px; /* Rounded only at bottom */
+            cursor: pointer;
+            font-size: 1em;
+            font-weight: 600;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            width: 100%;
+        }
+
+        .add-to-cart-btn:hover {
+            background-color: var(--accent-color);
+            color: var(--primary-color);
+        }
+
+        /* Why Choose Us Section */
+        .why-choose-us-section {
+            background-color: var(--background-color);
+            text-align: center;
+        }
+
+        .usp-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .usp-item {
+            background-color: #FFFFFF;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .usp-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .usp-icon {
+            font-size: 3em;
+            display: block;
+            margin-bottom: 15px;
+            color: var(--accent-color);
+        }
+
+        .usp-item h3 {
+            color: var(--primary-color);
+            font-size: 1.8em;
+            margin-bottom: 10px;
+        }
+
+        .usp-item p {
+            font-size: 1em;
+            color: var(--text-color);
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background-color: var(--primary-color);
+            color: var(--light-text-color);
+            text-align: center;
+            padding: 60px 20px;
+        }
+        .contact-section h2 {
+            color: var(--light-text-color);
+            margin-bottom: 1.5em;
+        }
+        .contact-section h2::after {
+            background-color: var(--accent-color);
+        }
+
+        .contact-info p {
+            font-size: 1.1em;
+            margin-bottom: 15px;
+        }
+        .contact-info a {
+            color: var(--accent-color);
+            font-weight: 600;
+        }
+        .contact-info a:hover {
+            color: var(--light-text-color);
+        }
+
+        .whatsapp-btn {
+            display: inline-flex;
+            align-items: center;
+            background-color: #25D366; /* WhatsApp Green */
+            color: #FFFFFF;
+            padding: 12px 25px;
+            border-radius: 50px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin: 25px auto 30px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            border: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .whatsapp-btn:hover {
+            background-color: #1DA851;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+            color: #FFFFFF; /* Ensure text remains white on hover */
+        }
+
+        .whatsapp-icon {
+            font-size: 1.5em; /* Using an emoji for icon */
+            margin-right: 10px;
+            line-height: 1;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333333;
+            color: #F0F0F0;
+            padding: 30px 20px;
+            text-align: center;
+            font-size: 0.9em;
+        }
+
+        footer p {
+            margin-bottom: 15px;
+        }
+
+        .social-icons {
+            margin-top: 15px;
+        }
+
+        .social-icons a {
+            display: inline-block;
+            margin: 0 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            transform: translateY(-3px);
+        }
+
+        .social-icons img {
+            width: 28px;
+            height: 28px;
+            filter: brightness(1.8); /* Make gold icons stand out on dark background */
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+            }
+            .nav-links {
+                margin-top: 20px;
+                flex-direction: column;
+                width: 100%;
+                text-align: center;
+            }
+            .nav-links li {
+                margin: 10px 0;
+            }
+            .nav-links a {
+                padding: 8px 0;
+                display: block;
+            }
+            .nav-links a::after {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            .hero-content h1 {
+                font-size: 3em;
+            }
+            .hero-content p {
+                font-size: 1.2em;
+            }
+            h2 {
+                font-size: 2em;
+            }
+            h3 {
+                font-size: 1.5em;
+            }
+
+            .product-grid, .usp-grid {
+                grid-template-columns: 1fr; /* Stack columns on mobile */
+            }
+
+            section {
+                padding: 60px 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .brand-name {
+                font-size: 1.7em;
+            }
+            .hero-content h1 {
+                font-size: 2.5em;
+            }
+            .hero-content p {
+                font-size: 1em;
+            }
+            .btn, .whatsapp-btn {
+                padding: 10px 20px;
+                font-size: 0.9em;
+            }
+            .whatsapp-icon {
+                font-size: 1.2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="brand-name">Kanha Ji Dresses</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#collections">Collections</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero-section">
+            <div class="hero-content">
+                <h1>Adorn Your Devotion</h1>
+                <p>Exquisite Handcrafted Dresses for Laddu Gopal</p>
+                <a href="#collections" class="btn">Explore Collection</a>
+            </div>
+        </section>
+
+        <section id="about" class="about-section">
+            <h2>Our Journey of Devotion</h2>
+            <p>At Kanha Ji Dresses, every garment is a testament to our deep devotion and artistic passion. We meticulously handcraft designer poshak for Laddu Gopal, ensuring unparalleled quality, premium fabrics, and intricate details that honor His divine grace.</p>
+        </section>
+
+        <section id="collections" class="collections-section">
+            <h2>Featured Collections</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-image"></div>
+                    <h3>Royal Silk Poshak</h3>
+                    <p class="price">₹1299</p>
+                    <button class="add-to-cart-btn">View Details</button>
+                </div>
+                <div class="product-card">
+                    <div class="product-image"></div>
+                    <h3>Festive Pitambar</h3>
+                    <p class="price">₹999</p>
+                    <button class="add-to-cart-btn">View Details</button>
+                </div>
+                <div class="product-card">
+                    <div class="product-image"></div>
+                    <h3>Elegant Brocade Set</h3>
+                    <p class="price">₹1499</p>
+                    <button class="add-to-cart-btn">View Details</button>
+                </div>
+                <div class="product-card">
+                    <div class="product-image"></div>
+                    <h3>Divine Velvet Attire</h3>
+                    <p class="price">₹1199</p>
+                    <button class="add-to-cart-btn">View Details</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="why-choose-us" class="why-choose-us-section">
+            <h2>Why Choose Kanha Ji Dresses?</h2>
+            <div class="usp-grid">
+                <div class="usp-item">
+                    <span class="usp-icon">✨</span>
+                    <h3>Exclusively Handmade</h3>
+                    <p>Each dress is lovingly crafted by skilled artisans with utmost care.</p>
+                </div>
+                <div class="usp-item">
+                    <span class="usp-icon">💎</span>
+                    <h3>Premium Fabrics</h3>
+                    <p>We use only the finest silks, brocades, and embellishments for lasting beauty.</p>
+                </div>
+                <div class="usp-item">
+                    <span class="usp-icon">🚚</span>
+                    <h3>Fast & Secure Delivery</h3>
+                    <p>Your divine garments arrive swiftly and safely at your doorstep.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <h2>Connect With Us</h2>
+            <div class="contact-info">
+                <p>Have a question or custom request? We'd love to hear from you!</p>
+                <a href="https://wa.me/919876543210" target="_blank" class="whatsapp-btn">
+                    <span class="whatsapp-icon">📞</span> Message us on WhatsApp
+                </a>
+                <p>Email: <a href="mailto:info@kanhajidresses.com">info@kanhajidresses.com</a></p>
+                <p>Address: Vrindavan, Uttar Pradesh, India</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Kanha Ji Dresses. All rights reserved.</p>
+        <div class="social-icons">
+            <a href="#" aria-label="Facebook"><img src="https://img.icons8.com/ios-filled/24/CC9933/facebook-new.png" alt="Facebook"></a>
+            <a href="#" aria-label="Instagram"><img src="https://img.icons8.com/ios-filled/24/CC9933/instagram-new--v1.png" alt="Instagram"></a>
+            <a href="#" aria-label="Pinterest"><img src="https://img.icons8.com/ios-filled/24/CC9933/pinterest.png" alt="Pinterest"></a>
+        </div>
+    </footer>
+</body>
 </html>
