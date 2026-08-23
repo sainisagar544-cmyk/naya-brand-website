@@ -3,612 +3,597 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kanha Ji Dresses - Designer Poshak for Laddu Gopal</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <title>Kanha Ji Dresses - Laddu Gopal ke liye Designer Poshak</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
     <style>
-        /* Basic Reset */
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
+        /* Strict Design System - Color Palette */
         :root {
-            --primary-color: #A30000; /* Deep Maroon/Red */
-            --accent-color: #CC9933; /* Gold */
-            --background-color: #FFF8E1; /* Cream */
-            --light-cream-color: #F8F0E3; /* Slightly lighter cream for sections */
-            --text-color: #333333; /* Dark Grey */
-            --light-text-color: #F8F0E3; /* Lighter cream for contrast on dark backgrounds */
+            --temple-maroon: #6E1423;
+            --antique-gold: #C9A227;
+            --ivory-silk: #FBF3E7;
+            --deep-sindoor: #A6321F;
+            --warm-charcoal: #2B1B12;
+            --soft-champagne: #F2E4C9;
         }
 
-        html {
-            scroll-behavior: smooth;
-        }
-
+        /* General Body Styles */
         body {
-            font-family: 'Lato', sans-serif;
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            color: var(--warm-charcoal);
+            background-color: var(--ivory-silk);
             line-height: 1.6;
-            color: var(--text-color);
-            background-color: var(--background-color);
-            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
 
-        /* Typography */
-        h1, h2, h3 {
-            font-family: 'Playfair Display', serif;
-            color: var(--primary-color);
-            margin-bottom: 0.8em;
-            font-weight: 700;
-        }
-
-        h1 {
-            font-size: 3em;
-            color: var(--light-text-color); /* For hero section */
-        }
-
-        h2 {
-            font-size: 2.5em;
+        /* Typography for Headings */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 600;
+            color: var(--temple-maroon);
             text-align: center;
-            margin-top: 1.5em;
-            padding-bottom: 0.5em;
-            position: relative;
-            display: block;
-            width: fit-content;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        h2::after {
-            content: '';
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            bottom: 0;
-            width: 60px;
-            height: 3px;
-            background-color: var(--accent-color);
-        }
-
-        h3 {
-            font-size: 1.7em;
-        }
-
-        p {
             margin-bottom: 1em;
         }
 
+        /* Anchor Link Reset */
         a {
-            color: var(--primary-color);
             text-decoration: none;
-            transition: color 0.3s ease;
+            color: inherit;
         }
 
-        a:hover {
-            color: var(--accent-color);
-        }
-
-        /* Buttons */
-        .btn {
-            display: inline-block;
-            background-color: var(--accent-color);
-            color: var(--primary-color); /* Gold button, maroon text */
-            padding: 12px 25px;
-            border-radius: 5px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            transition: all 0.3s ease;
-            border: 2px solid var(--accent-color);
-        }
-
-        .btn:hover {
-            background-color: var(--primary-color);
-            color: var(--light-text-color); /* Maroon button, cream text */
-            border-color: var(--primary-color);
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-
-        /* Header & Navbar */
-        header {
-            background-color: var(--primary-color);
-            padding: 15px 0;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+        /* Reusable Container for Content Width */
+        .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
         }
 
+        /* Header Section */
+        header {
+            background-color: var(--ivory-silk);
+            padding: 20px 0;
+            border-bottom: 1px solid var(--soft-champagne);
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap; /* For responsiveness */
+            gap: 20px;
+        }
+
         .brand-name {
-            font-family: 'Playfair Display', serif;
-            font-size: 2em;
-            color: var(--light-text-color);
-            font-weight: 700;
-            letter-spacing: 1px;
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 600;
+            font-size: 2.2em;
+            color: var(--antique-gold);
+            margin: 0;
         }
 
         .nav-links {
             list-style: none;
+            margin: 0;
+            padding: 0;
             display: flex;
-        }
-
-        .nav-links li {
-            margin-left: 30px;
+            gap: 30px;
+            flex-wrap: wrap;
+            justify-content: center;
         }
 
         .nav-links a {
-            color: var(--light-text-color);
-            font-weight: 400;
-            font-size: 1.1em;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 500;
+            color: var(--warm-charcoal);
             padding: 5px 0;
-            position: relative;
             transition: color 0.3s ease;
         }
 
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            width: 0;
-            height: 2px;
-            background-color: var(--accent-color);
-            transition: width 0.3s ease;
-        }
-
-        .nav-links a:hover::after {
-            width: 100%;
-        }
         .nav-links a:hover {
-            color: var(--accent-color);
+            color: var(--temple-maroon);
         }
 
         /* Hero Section */
-        .hero-section {
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://via.placeholder.com/1920x800/A30000/CC9933?text=Adorn+Your+Devotion') no-repeat center center/cover;
-            height: 80vh;
+        #hero {
+            position: relative;
+            background-color: var(--ivory-silk);
+            padding: 80px 0;
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
             text-align: center;
-            color: var(--light-text-color);
+            overflow: hidden; /* For radial gradient glow */
+        }
+
+        .hero-glow {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background: radial-gradient(circle at center, rgba(201, 162, 39, 0.1) 0%, rgba(201, 162, 39, 0) 70%);
+            pointer-events: none;
+            opacity: 0; /* Initial state for fade-in */
+            animation: fadeIn 1.5s ease-out forwards;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
         }
 
         .hero-content {
+            position: relative;
+            z-index: 1;
             max-width: 800px;
             padding: 20px;
+            box-sizing: border-box;
+            opacity: 0; /* Initial state for fade-in */
+            animation: fadeIn 1.5s ease-out 0.5s forwards; /* Delayed fade-in */
         }
 
-        .hero-content h1 {
-            font-size: 4.5em;
-            margin-bottom: 0.2em;
-            line-height: 1.1;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        .jharokha-frame {
+            width: 100%;
+            max-width: 600px;
+            height: 350px;
+            border: 3px solid var(--antique-gold);
+            border-top-left-radius: 50% 50%; /* Jharokha arch shape */
+            border-top-right-radius: 50% 50%;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            overflow: hidden;
+            background-color: transparent; /* Frame itself is transparent inside */
+            margin-bottom: 40px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            position: relative;
         }
 
-        .hero-content p {
-            font-size: 1.5em;
-            margin-bottom: 30px;
-            font-weight: 300;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        .jharokha-frame-inner {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #ddd; /* Placeholder for hero visual */
+            border-top-left-radius: 50% 50%; /* Match outer arch for visual */
+            border-top-right-radius: 50% 50%;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
         }
 
-        /* General Section Styling */
-        section {
-            padding: 80px 20px;
-            max-width: 1200px;
-            margin: 0 auto;
+        #hero h1 {
+            font-size: 3.5em;
+            color: var(--temple-maroon);
+            margin-bottom: 20px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.05);
+        }
+
+        #hero p {
+            font-size: 1.3em;
+            margin-bottom: 40px;
+            color: var(--warm-charcoal);
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--deep-sindoor);
+            color: var(--ivory-silk);
+            font-family: 'Poppins', sans-serif;
+            font-weight: 500;
+            font-size: 1.1em;
+            padding: 15px 35px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .cta-button:hover {
+            background-color: #8f2d1b; /* Slightly darker sindoor */
+            transform: translateY(-2px);
         }
 
         /* About Section */
-        .about-section {
-            background-color: var(--background-color);
+        #about {
+            background-color: var(--soft-champagne);
+            padding: 80px 0;
             text-align: center;
         }
-        .about-section h2 {
-            margin-bottom: 1em;
-        }
-        .about-section p {
-            font-size: 1.2em;
-            max-width: 800px;
-            margin: 0 auto 2em;
+
+        #about h2 {
+            font-size: 2.8em;
+            margin-bottom: 30px;
         }
 
-        /* Collections Section */
-        .collections-section {
-            background-color: var(--light-cream-color); /* Slightly different cream */
+        #about p {
+            max-width: 700px;
+            margin: 0 auto;
+            font-size: 1.1em;
+            color: var(--warm-charcoal);
+        }
+
+        /* Featured Collections Section */
+        #collections {
+            padding: 80px 0;
+            background-color: var(--ivory-silk);
+        }
+
+        #collections h2 {
+            font-size: 2.8em;
+            margin-bottom: 50px;
         }
 
         .product-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-            margin-top: 50px;
+            gap: 40px;
+            justify-content: center;
+            padding: 0 20px;
         }
 
         .product-card {
-            background-color: #FFFFFF;
-            border: 1px solid #E0E0E0;
-            border-radius: 8px;
+            background-color: var(--ivory-silk);
+            border: 2px solid var(--antique-gold);
+            border-top-left-radius: 50% 50%; /* Jharokha arch top */
+            border-top-right-radius: 50% 50%;
+            border-bottom-left-radius: 10px; /* Slight bottom rounding */
+            border-bottom-right-radius: 10px;
             overflow: hidden;
             text-align: center;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+            padding-bottom: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
+            position: relative;
         }
 
         .product-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            transform: scale(1.03);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.12);
         }
 
-        .product-image {
+        .product-image-placeholder {
             width: 100%;
             height: 250px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: var(--light-text-color);
-            font-size: 1.5em;
-            font-family: 'Playfair Display', serif;
-            background-size: cover;
-            background-position: center;
-        }
-
-        /* Specific product image backgrounds (SVG data URIs for traditional patterns) */
-        .product-card:nth-child(1) .product-image { 
-            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 100 100"><rect x="0" y="0" width="100" height="100" fill="%23A30000"/><path d="M50 25L60 40L75 45L65 60L70 75L50 65L30 75L35 60L25 45L40 40Z" fill="%23CC9933"/><circle cx="50" cy="50" r="10" fill="%23CC9933"/></svg>'); 
-        }
-        .product-card:nth-child(2) .product-image { 
-            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 100 100"><rect x="0" y="0" width="100" height="100" fill="%23CC9933"/><path d="M50 10L65 35L90 40L70 60L75 90L50 75L25 90L30 60L10 40L35 35Z" fill="%23A30000"/><circle cx="50" cy="50" r="10" fill="%23A30000"/></svg>'); 
-        }
-        .product-card:nth-child(3) .product-image { 
-            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 100 100"><rect x="0" y="0" width="100" height="100" fill="%23A30000"/><path d="M50 20 L80 50 L50 80 L20 50 Z" fill="%23CC9933"/><circle cx="50" cy="50" r="10" fill="%23A30000"/></svg>'); 
-        }
-        .product-card:nth-child(4) .product-image { 
-            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 100 100"><rect x="0" y="0" width="100" height="100" fill="%23CC9933"/><path d="M50 10L65 35L90 40L70 60L75 90L50 75L25 90L30 60L10 40L35 35Z" fill="%23A30000"/><circle cx="50" cy="50" r="10" fill="%23A30000"/></svg>'); 
+            background-color: #ddd; /* Placeholder color */
+            border-top-left-radius: 50% 50%; /* Match card top arch */
+            border-top-right-radius: 50% 50%;
+            margin-bottom: 15px;
+            overflow: hidden; /* Ensures image inside placeholder would also be clipped */
         }
 
         .product-card h3 {
-            color: var(--primary-color);
-            font-size: 1.5em;
-            margin: 20px 0 10px;
-            flex-grow: 1; /* Allows it to take up available space */
+            font-family: 'Poppins', sans-serif;
+            font-weight: 500;
+            font-size: 1.2em;
+            color: var(--temple-maroon);
+            margin: 15px 0 10px;
+            text-transform: uppercase; /* Typography: Labels */
+            letter-spacing: 1px; /* Typography: Labels */
         }
 
         .product-card .price {
-            font-size: 1.3em;
-            font-weight: 700;
-            color: var(--accent-color);
-            margin-bottom: 15px;
-        }
-
-        .add-to-cart-btn {
-            background-color: var(--primary-color);
-            color: var(--light-text-color);
-            border: none;
-            padding: 10px 20px;
-            border-radius: 0 0 8px 8px; /* Rounded only at bottom */
-            cursor: pointer;
-            font-size: 1em;
-            font-weight: 600;
-            transition: background-color 0.3s ease, color 0.3s ease;
-            width: 100%;
-        }
-
-        .add-to-cart-btn:hover {
-            background-color: var(--accent-color);
-            color: var(--primary-color);
+            font-family: 'Poppins', sans-serif;
+            font-weight: 500;
+            font-size: 1.1em;
+            color: var(--antique-gold); /* Typography: Prices */
+            letter-spacing: 1.5px; /* Typography: Prices */
+            text-transform: uppercase; /* Typography: Prices */
         }
 
         /* Why Choose Us Section */
-        .why-choose-us-section {
-            background-color: var(--background-color);
+        #why-choose-us {
+            background-color: var(--soft-champagne);
+            padding: 80px 0;
             text-align: center;
         }
 
+        #why-choose-us h2 {
+            font-size: 2.8em;
+            margin-bottom: 50px;
+        }
+
         .usp-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-            margin-top: 50px;
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            flex-wrap: wrap;
         }
 
         .usp-item {
-            background-color: #FFFFFF;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        .usp-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            flex: 0 0 300px;
+            padding: 20px;
+            text-align: center;
         }
 
         .usp-icon {
-            font-size: 3em;
-            display: block;
-            margin-bottom: 15px;
-            color: var(--accent-color);
+            margin-bottom: 20px;
+            display: inline-block;
+            width: 60px;
+            height: 60px;
+        }
+        .usp-icon svg {
+            width: 100%;
+            height: 100%;
+            stroke: var(--antique-gold); /* Gold color for icons */
+            stroke-width: 2;
+            fill: none; /* Default for line icons */
+            vertical-align: middle;
+        }
+        .usp-icon svg .filled-path { /* For paths within SVGs that need to be filled */
+            fill: var(--antique-gold);
+            stroke: none;
         }
 
         .usp-item h3 {
-            color: var(--primary-color);
-            font-size: 1.8em;
-            margin-bottom: 10px;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 500;
+            font-size: 1.3em;
+            color: var(--temple-maroon);
+            margin-bottom: 15px;
         }
 
         .usp-item p {
             font-size: 1em;
-            color: var(--text-color);
+            color: var(--warm-charcoal);
         }
 
-        /* Contact Section */
-        .contact-section {
-            background-color: var(--primary-color);
-            color: var(--light-text-color);
+        /* Contact & WhatsApp Section */
+        #contact {
+            padding: 80px 0;
             text-align: center;
-            padding: 60px 20px;
-        }
-        .contact-section h2 {
-            color: var(--light-text-color);
-            margin-bottom: 1.5em;
-        }
-        .contact-section h2::after {
-            background-color: var(--accent-color);
+            background-color: var(--ivory-silk);
         }
 
-        .contact-info p {
+        #contact h2 {
+            font-size: 2.8em;
+            margin-bottom: 30px;
+        }
+
+        #contact p {
             font-size: 1.1em;
-            margin-bottom: 15px;
-        }
-        .contact-info a {
-            color: var(--accent-color);
-            font-weight: 600;
-        }
-        .contact-info a:hover {
-            color: var(--light-text-color);
+            margin-bottom: 10px;
         }
 
-        .whatsapp-btn {
-            display: inline-flex;
+        .contact-details {
+            max-width: 600px;
+            margin: 0 auto 40px;
+            color: var(--warm-charcoal);
+        }
+
+        /* Floating WhatsApp Button */
+        .floating-whatsapp {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: var(--deep-sindoor);
+            color: var(--ivory-silk);
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            justify-content: center;
             align-items: center;
-            background-color: #25D366; /* WhatsApp Green */
-            color: #FFFFFF;
-            padding: 12px 25px;
-            border-radius: 50px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin: 25px auto 30px;
-            transition: background-color 0.3s ease, transform 0.3s ease;
-            border: none;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            font-size: 2em;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            z-index: 1000;
+            transition: background-color 0.3s ease, transform 0.2s ease;
         }
 
-        .whatsapp-btn:hover {
-            background-color: #1DA851;
-            transform: translateY(-3px);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-            color: #FFFFFF; /* Ensure text remains white on hover */
+        .floating-whatsapp:hover {
+            background-color: #8f2d1b; /* Slightly darker sindoor */
+            transform: scale(1.05);
         }
 
-        .whatsapp-icon {
-            font-size: 1.5em; /* Using an emoji for icon */
-            margin-right: 10px;
-            line-height: 1;
-        }
-
-        /* Footer */
+        /* Footer Section */
         footer {
-            background-color: #333333;
-            color: #F0F0F0;
-            padding: 30px 20px;
+            background-color: var(--temple-maroon);
+            color: var(--ivory-silk);
+            padding: 30px 0;
             text-align: center;
             font-size: 0.9em;
         }
 
-        footer p {
-            margin-bottom: 15px;
-        }
-
-        .social-icons {
-            margin-top: 15px;
-        }
-
-        .social-icons a {
-            display: inline-block;
-            margin: 0 10px;
-            transition: transform 0.3s ease;
-        }
-
-        .social-icons a:hover {
-            transform: translateY(-3px);
-        }
-
-        .social-icons img {
-            width: 28px;
-            height: 28px;
-            filter: brightness(1.8); /* Make gold icons stand out on dark background */
-        }
-
         /* Responsive Design */
         @media (max-width: 768px) {
-            nav {
+            .navbar {
                 flex-direction: column;
+                gap: 20px;
             }
             .nav-links {
-                margin-top: 20px;
-                flex-direction: column;
-                width: 100%;
-                text-align: center;
+                gap: 20px;
             }
-            .nav-links li {
-                margin: 10px 0;
+            .brand-name {
+                font-size: 1.8em;
             }
-            .nav-links a {
-                padding: 8px 0;
-                display: block;
+            #hero h1 {
+                font-size: 2.5em;
             }
-            .nav-links a::after {
-                left: 50%;
-                transform: translateX(-50%);
+            #hero p {
+                font-size: 1em;
             }
-
-            .hero-content h1 {
-                font-size: 3em;
-            }
-            .hero-content p {
-                font-size: 1.2em;
+            .jharokha-frame {
+                height: 250px;
             }
             h2 {
-                font-size: 2em;
+                font-size: 2em !important; /* Important to override specific H2 sizes */
             }
-            h3 {
-                font-size: 1.5em;
+            .product-grid {
+                grid-template-columns: 1fr;
+                padding: 0 40px;
             }
-
-            .product-grid, .usp-grid {
-                grid-template-columns: 1fr; /* Stack columns on mobile */
+            .usp-grid {
+                flex-direction: column;
+                gap: 30px;
             }
-
-            section {
-                padding: 60px 15px;
+            .floating-whatsapp {
+                width: 50px;
+                height: 50px;
+                font-size: 1.8em;
+                bottom: 20px;
+                right: 20px;
             }
         }
 
         @media (max-width: 480px) {
-            .brand-name {
-                font-size: 1.7em;
+            .container {
+                padding: 0 15px;
             }
-            .hero-content h1 {
-                font-size: 2.5em;
+            .nav-links {
+                gap: 15px;
             }
-            .hero-content p {
+            #hero h1 {
+                font-size: 2em;
+            }
+            .jharokha-frame {
+                max-width: 90%;
+            }
+            .cta-button {
+                padding: 12px 25px;
                 font-size: 1em;
             }
-            .btn, .whatsapp-btn {
-                padding: 10px 20px;
-                font-size: 0.9em;
+            .product-grid {
+                 padding: 0 15px;
             }
-            .whatsapp-icon {
-                font-size: 1.2em;
+            .product-card {
+                padding-bottom: 15px;
+            }
+            .product-image-placeholder {
+                height: 200px;
             }
         }
     </style>
 </head>
 <body>
     <header>
-        <nav>
-            <div class="brand-name">Kanha Ji Dresses</div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#collections">Collections</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+        <div class="container navbar">
+            <h1 class="brand-name">Kanha Ji Dresses</h1>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#collections">Collections</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <main>
-        <section id="home" class="hero-section">
-            <div class="hero-content">
-                <h1>Adorn Your Devotion</h1>
-                <p>Exquisite Handcrafted Dresses for Laddu Gopal</p>
-                <a href="#collections" class="btn">Explore Collection</a>
+    <section id="hero">
+        <div class="hero-glow"></div>
+        <div class="hero-content">
+            <div class="jharokha-frame">
+                <div class="jharokha-frame-inner">
+                    <!-- Hero Visual Placeholder -->
+                </div>
             </div>
-        </section>
+            <h1>Divine Attire for Your Beloved Laddu Gopal</h1>
+            <p>Experience the devotion handcrafted into every delicate stitch, adorning your Bal Krishna with unmatched grace and elegance.</p>
+            <a href="#collections" class="cta-button">Explore Our Collections</a>
+        </div>
+    </section>
 
-        <section id="about" class="about-section">
-            <h2>Our Journey of Devotion</h2>
-            <p>At Kanha Ji Dresses, every garment is a testament to our deep devotion and artistic passion. We meticulously handcraft designer poshak for Laddu Gopal, ensuring unparalleled quality, premium fabrics, and intricate details that honor His divine grace.</p>
-        </section>
+    <section id="about">
+        <div class="container">
+            <h2>Our Story</h2>
+            <p>At Kanha Ji Dresses, we pour our heart and soul into creating exquisite attire for Laddu Gopal. Each garment is a labor of love, meticulously handcrafted with devotion, using the finest fabrics and intricate embellishments. We believe in adorning divinity with dignity and beauty.</p>
+        </div>
+    </section>
 
-        <section id="collections" class="collections-section">
+    <section id="collections">
+        <div class="container">
             <h2>Featured Collections</h2>
             <div class="product-grid">
                 <div class="product-card">
-                    <div class="product-image"></div>
-                    <h3>Royal Silk Poshak</h3>
-                    <p class="price">₹1299</p>
-                    <button class="add-to-cart-btn">View Details</button>
+                    <div class="product-image-placeholder"></div>
+                    <h3>Radiant Pink Lehanga</h3>
+                    <p class="price">₹1250</p>
                 </div>
                 <div class="product-card">
-                    <div class="product-image"></div>
-                    <h3>Festive Pitambar</h3>
-                    <p class="price">₹999</p>
-                    <button class="add-to-cart-btn">View Details</button>
-                </div>
-                <div class="product-card">
-                    <div class="product-image"></div>
-                    <h3>Elegant Brocade Set</h3>
+                    <div class="product-image-placeholder"></div>
+                    <h3>Divine Blue Dhoti Set</h3>
                     <p class="price">₹1499</p>
-                    <button class="add-to-cart-btn">View Details</button>
                 </div>
                 <div class="product-card">
-                    <div class="product-image"></div>
-                    <h3>Divine Velvet Attire</h3>
-                    <p class="price">₹1199</p>
-                    <button class="add-to-cart-btn">View Details</button>
+                    <div class="product-image-placeholder"></div>
+                    <h3>Emerald Green Poshaak</h3>
+                    <p class="price">₹1800</p>
+                </div>
+                <div class="product-card">
+                    <div class="product-image-placeholder"></div>
+                    <h3>Peacock Feather Dress</h3>
+                    <p class="price">₹1675</p>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="why-choose-us" class="why-choose-us-section">
+    <section id="why-choose-us">
+        <div class="container">
             <h2>Why Choose Kanha Ji Dresses?</h2>
             <div class="usp-grid">
                 <div class="usp-item">
-                    <span class="usp-icon">✨</span>
-                    <h3>Exclusively Handmade</h3>
-                    <p>Each dress is lovingly crafted by skilled artisans with utmost care.</p>
+                    <span class="usp-icon">
+                        <!-- Craftsmanship icon (Gear) -->
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="3"></circle>
+                            <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+                        </svg>
+                    </span>
+                    <h3>Exquisite Handcraftsmanship</h3>
+                    <p>Each dress is lovingly handmade, ensuring unparalleled quality and intricate details that delight.</p>
                 </div>
                 <div class="usp-item">
-                    <span class="usp-icon">💎</span>
-                    <h3>Premium Fabrics</h3>
-                    <p>We use only the finest silks, brocades, and embellishments for lasting beauty.</p>
+                    <span class="usp-icon">
+                        <!-- Quality Fabric icon (Diamond) -->
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 1L22 7.5V16.5L12 23L2 16.5V7.5L12 1Z"></path>
+                            <path d="M22 7.5L12 12L2 7.5"></path>
+                            <path d="M12 23V12"></path>
+                        </svg>
+                    </span>
+                    <h3>Premium Quality Fabrics</h3>
+                    <p>We select only the softest, most luxurious materials, ensuring comfort and a truly regal feel for your deity.</p>
                 </div>
                 <div class="usp-item">
-                    <span class="usp-icon">🚚</span>
-                    <h3>Fast & Secure Delivery</h3>
-                    <p>Your divine garments arrive swiftly and safely at your doorstep.</p>
+                    <span class="usp-icon">
+                        <!-- Devotion icon (Heart) -->
+                        <svg viewBox="0 0 24 24" fill="currentColor" stroke="none">
+                            <path class="filled-path" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path>
+                        </svg>
+                    </span>
+                    <h3>Crafted with Devotion</h3>
+                    <p>More than just dresses, each piece is imbued with reverence and love, a true offering to Laddu Gopal.</p>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="contact" class="contact-section">
-            <h2>Connect With Us</h2>
-            <div class="contact-info">
-                <p>Have a question or custom request? We'd love to hear from you!</p>
-                <a href="https://wa.me/919876543210" target="_blank" class="whatsapp-btn">
-                    <span class="whatsapp-icon">📞</span> Message us on WhatsApp
-                </a>
-                <p>Email: <a href="mailto:info@kanhajidresses.com">info@kanhajidresses.com</a></p>
-                <p>Address: Vrindavan, Uttar Pradesh, India</p>
+    <section id="contact">
+        <div class="container">
+            <h2>Get In Touch</h2>
+            <div class="contact-details">
+                <p>For custom orders, inquiries, or assistance, please reach out to us.</p>
+                <p><strong>Email:</strong> info@kanhajidresses.com</p>
+                <p><strong>Phone:</strong> +91 98765 43210</p>
+                <p><strong>Address:</strong> Vrindavan, Uttar Pradesh, India</p>
             </div>
-        </section>
-    </main>
+            <a href="https://wa.me/919876543210" target="_blank" class="cta-button">Message Us on WhatsApp</a>
+        </div>
+    </section>
+
+    <a href="https://wa.me/919876543210" target="_blank" class="floating-whatsapp" aria-label="WhatsApp Us">
+        <!-- WhatsApp icon SVG -->
+        <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+            <path d="M12.04 2C7.34 2 3.56 5.78 3.56 10.48c0 1.96.65 3.8 1.79 5.3l-1.8 5.61 5.72-1.75c1.45.79 3.08 1.25 4.77 1.25 4.7 0 8.48-3.78 8.48-8.48S16.74 2 12.04 2zm3.32 12.78s-.2-.1-.58-.29c-.4-.2-.58-.3-.82-.3-.24 0-.46.09-.64.29-.2.2-.75.74-.92.89-.18.16-.33.18-.61.08-.28-.1-.95-.35-1.81-.97-.67-.49-1.12-.9-1.26-1.14-.14-.24-.02-.37.1-.49.11-.11.24-.29.35-.43.12-.15.16-.29.24-.49.08-.2.04-.37-.02-.49-.06-.11-.58-1.39-.79-1.92-.2-.52-.4-.45-.58-.46-.18 0-.39-.01-.58-.01-.25 0-.66.09-1 .49-.33.4-.92.9-1.12 1.13-.2.24-.33.39-.33.79 0 .4.29.77.41.97.12.2.85 1.48 2 1.99 1.15.52 1.15.38 1.42.36.27-.02.83-.34 1.02-.49.19-.15.34-.29.46-.39.13-.11.23-.19.35-.29.11-.09.2-.18.3-.26.23-.18.4-.29.61-.41z"></path>
+        </svg>
+    </a>
 
     <footer>
-        <p>&copy; 2026 Kanha Ji Dresses. All rights reserved.</p>
-        <div class="social-icons">
-            <a href="#" aria-label="Facebook"><img src="https://img.icons8.com/ios-filled/24/CC9933/facebook-new.png" alt="Facebook"></a>
-            <a href="#" aria-label="Instagram"><img src="https://img.icons8.com/ios-filled/24/CC9933/instagram-new--v1.png" alt="Instagram"></a>
-            <a href="#" aria-label="Pinterest"><img src="https://img.icons8.com/ios-filled/24/CC9933/pinterest.png" alt="Pinterest"></a>
+        <div class="container">
+            <p>&copy; 2026 Kanha Ji Dresses. All rights reserved.</p>
+            <p>Crafted with love and devotion.</p>
         </div>
     </footer>
 </body>
