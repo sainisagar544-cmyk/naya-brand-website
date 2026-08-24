@@ -52,6 +52,7 @@
         .product-card-content { padding: 20px; text-align: center; }
         .product-name { font-family: var(--font-body); font-weight: 500; font-size: 1.2rem; text-transform: uppercase; letter-spacing: 1px; color: var(--temple-maroon); margin-bottom: 10px; }
         .product-price { font-family: var(--font-body); font-weight: 500; font-size: 1.3rem; color: var(--antique-gold); text-transform: uppercase; letter-spacing: 2px; }
+        .product-description { font-family: var(--font-body); font-size: 0.95rem; color: var(--warm-charcoal); margin-top: 10px; line-height: 1.5; }
         #why-choose-us { background-color: var(--ivory-silk); text-align: center; }
         #why-choose-us h2 { font-size: 2.8rem; margin-bottom: 50px; }
         .usp-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 40px; }
@@ -214,6 +215,7 @@
             <div class="product-card-content">
               <h3 class="product-name">${p.name}</h3>
               <p class="product-price">${p.price}</p>
+              <p class="product-description">${p.description || ''}</p>
             </div>
           </div>
         `).join('');
